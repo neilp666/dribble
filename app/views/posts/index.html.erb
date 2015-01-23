@@ -1,6 +1,7 @@
 <h1>Placeholder Text</h1>
 
 <% @posts.each do |post| %>
+	<p><%= link_to (image_tag post.image.url(:small)) %></p>
     <p><%= link_to post.title, post %></p>
 <% end %>
 

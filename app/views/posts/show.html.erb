@@ -1,9 +1,11 @@
 <p>show page</p>
 
+
+<p><%=image_tag @post.image.url(:medium) %></p>
 <p><%=link_to @post.title %></p>
 <p><%=link_to @post.link %></p>
 <p><%=link_to @post.description %></p>
-<p><%= user.name %></p>
+
 
 <p><%=link_to "Home", root_path %></p>
 <p><%=link_to "Edit", edit_post_path(@post) %>
