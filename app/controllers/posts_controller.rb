@@ -7,6 +7,7 @@ before_action :authenticate_user!, except: [:index, :show]
 	end
 
 	def show
+		@comments = Comment.where(post_id: @post)
 	end
 
 	def new

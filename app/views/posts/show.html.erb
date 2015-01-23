@@ -6,7 +6,25 @@
 <p><%=link_to @post.link %></p>
 <p><%=link_to @post.description %></p>
 
+<div id="comments">
+	<h2 class="comment_count"><%= pluralize(@post.comments.count, "Comment" ) %></h2>
+
+	<% @comments.each do |comment| %>
+	<div class="comment">
+		<p class="username">
+	
+		</p>
+	<p class="content">
+		<%= comment.content %>
+	</p>
+</div>
+<% end %>
+<%= render "comments/form" %>
+</div>
+
+
+
 
 <p><%=link_to "Home", root_path %></p>
-<p><%=link_to "Edit", edit_post_path(@post) %>
+<p><%=link_to "Edit", edit_post_path(@post) %></p>
 <p><%=link_to "Destroy", post_path(@post), method: :delete, data: { confirm: "Are You Sure" } %></p>
