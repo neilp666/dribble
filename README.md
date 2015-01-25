@@ -9,6 +9,7 @@ dribble type application
 * paperclip
 * devise
 * Sqlite
+* voteable = adding likes
 
 
 Please feel free to use a different markup language if you do not plan to run

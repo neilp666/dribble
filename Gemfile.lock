@@ -37,8 +37,15 @@ GEM
       minitest (~> 5.1)
       thread_safe (~> 0.1)
       tzinfo (~> 1.1)
+    acts_as_votable (0.10.0)
     arel (5.0.1.20140414130214)
+    autoprefixer-rails (5.0.0.2)
+      execjs
+      json
     bcrypt (3.1.9)
+    bootstrap-sass (3.3.3)
+      autoprefixer-rails (>= 5.0.0.1)
+      sass (>= 3.2.19)
     builder (3.2.2)
     climate_control (0.0.3)
       activesupport (>= 3.0)
@@ -138,6 +145,8 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  acts_as_votable (~> 0.10.0)
+  bootstrap-sass (~> 3.3.3)
   coffee-rails (~> 4.0.0)
   devise
   jbuilder (~> 2.0)

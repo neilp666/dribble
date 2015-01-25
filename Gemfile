@@ -14,5 +14,7 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 gem 'spring',        group: :development
 gem 'devise'
 gem 'simple_form'
+gem 'acts_as_votable', '~> 0.10.0'
+gem 'bootstrap-sass', '~> 3.3.3'
 gem "paperclip", :git => "git://github.com/thoughtbot/paperclip.git"
 
