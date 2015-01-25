@@ -1,3 +1,58 @@
+<% if user_signed_in? %>
+	<p id="intro">
+		Hello
+		<%= current_user.name %>
+		<br/>
+		<span>
+			Share your inspiration and see what's inspiring others.
+		</span>
+	</p>
+
+	<% else %>
+	<p id="intro">
+		What's your muse?
+		<br/>
+		<span>
+			Share your inspiration and see what's inspiring others
+		</span>
+	</p>
+	<% end %>
+
+
+<div id="posts">
+	<% @posts.each do |post| %>
+		<div class="post_image">
+			<%= link_to (image_tag post.image.url(:small)), post %>
+		</div>
+
+		<div class="post_content">
+			<div class="title">
+				<h2>
+					<%= link_to post.title, post %>
+				</h2>
+			</div>
+		<div class="data clearfix">
+			<p class="username">
+				shared by
+				<%= post.user.name %>
+			</p>
+			<p class="buttons">
+				<span>
+					<i class="fa fa-comments-o"></i>
+					<%= post.comments.count %>
+				</span>
+				<span>
+					<i class="fa fa-thumbs-o-up"></i>
+					<%= post.get_likes.size %>
+				</span>
+			</p>
+		</div>
+	</div>
+</div>
+<% end %>
+</div>
+
+
 <h1>Placeholder Text</h1>
 
 <% @posts.each do |post| %>
